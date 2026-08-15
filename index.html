@@ -297,6 +297,13 @@
   .bullet-list li::before{ content:"→"; position:absolute; left:0; color:var(--teal); font-family:'IBM Plex Mono', monospace; }
   @media (max-width:720px){ .two-col-grid{ grid-template-columns:1fr; } }
 
+  /* ---------- EDUCATION ---------- */
+  .edu-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; }
+  .edu-card{ padding:24px; }
+  .edu-card .degree{ font-size:1.05rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+  .edu-card .school{ color:var(--teal); font-size:0.9rem; font-weight:500; margin-bottom:8px; }
+  .edu-card .meta{ font-family:'IBM Plex Mono', monospace; font-size:0.78rem; color:var(--text-muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+
   /* ---------- FOOTER & CONTACT ---------- */
   footer{ padding:80px 0 40px; }
   .contact-inner{ display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:32px; }
@@ -363,6 +370,7 @@
       <a href="#playground" data-nav>Projects</a>
       <a href="#skills" data-nav>Skills</a>
       <a href="#ai-tooling" data-nav>Automation</a>
+      <a href="#education" data-nav>Education</a>
       <a href="#contact" data-nav>Contact</a>
     </nav>
   </div>
@@ -373,7 +381,7 @@
   
   <div class="wrap hero-content">
     <div class="hero-badge">
-      <span class="status-dot"></span> Senior Software Engineer — Principal Global Services
+      <span class="status-dot"></span> Senior Software Engineer — Principal Financial Group
     </div>
     <h1>Building scalable backend systems on AWS.</h1>
     <p class="hero-tagline">
@@ -408,11 +416,11 @@
       </div>
       <div class="recruiter-item">
         <span class="title">Core Domains</span>
-        <span class="val">Treasury, Payments, ERP</span>
+        <span class="val">Treasury, Payments, Enterprise Ledger</span>
       </div>
       <div class="recruiter-item">
         <span class="title">Academic Base</span>
-        <span class="val">M.Tech AI/ML (BITS Pilani)</span>
+        <span class="val">M.Tech AI/ML (BITS Pilani), '26–'28</span>
       </div>
     </div>
   </div>
@@ -433,7 +441,7 @@
           My day-to-day focus is on <strong>AWS cloud-native platform development</strong>: leveraging Spring Boot, Python, AWS Lambda, Step Functions, Glue, and DynamoDB to process critical transactional data. I care deeply about the unglamorous essentials—reconciliation loops, idempotency, strict schema validation, and zero-downtime ledger migrations.
         </p>
         <p>
-          While my baseline identity is backend systems engineering, I leverage <strong>Agentic AI and custom Developer Tooling</strong> to eliminate team friction—automating documentation generation, architecture tracking, and routine refactoring.
+          While my baseline identity is backend systems engineering, I leverage <strong>Agentic AI and custom Developer Tooling</strong> to eliminate team friction—building GenAI, NLP, and RAG proofs-of-concept, and automating documentation generation, architecture tracking, and routine refactoring.
         </p>
       </div>
 
@@ -477,7 +485,7 @@
       </div>
       <div class="principle-card spot-card reveal">
         <div class="principle-num">02</div>
-        <h3>Design for Failure</h3>
+        <h3>Design for Failure prevention</h3>
         <p>Network calls fail and queues backlog. Systems must be built with idempotency, dead-letter processing, and graceful fallback paths by default.</p>
       </div>
       <div class="principle-card spot-card reveal">
@@ -502,36 +510,69 @@
     </div>
 
     <div class="timeline">
-      <!-- Role 1 -->
+      <!-- Role 1: Current -->
       <div class="t-entry reveal">
         <div class="t-header">
           <div class="role">Sr. Software Engineer</div>
-          <div class="date">DEC 2021 — PRESENT</div>
+          <div class="date">JUL 2025 — PRESENT</div>
         </div>
-        <div class="org">Principal Global Services</div>
-        
+        <div class="org">Principal Financial Group</div>
+
         <div class="impact-group">
           <div class="impact-item">
             <div class="impact-label">Platform Engineering &amp; Data Migration</div>
-            <div class="impact-desc">Leading technical design for the Financial Foundations platform, orchestrating the migration of enterprise financial data from PeopleSoft Ledger to Oracle Ledger via serverless AWS architectures.</div>
+            <div class="impact-desc">Leading design and development of the Financial Foundations platform for enterprise ledger transformation, migrating financial data from PeopleSoft Ledger to Oracle Ledger.</div>
           </div>
           <div class="impact-item">
-            <div class="impact-label">Cloud Architecture &amp; Payments</div>
-            <div class="impact-desc">Architected end-to-end payment processing integrations for Kyriba (Wire, ACH, Check), establishing ISO 20022 compliant file transformations, automated reconciliation loops, and duplicate payment safety checks.</div>
+            <div class="impact-label">Serverless Cloud Architecture</div>
+            <div class="impact-desc">Architected a serverless AWS data processing platform using S3, Lambda, SQS, SNS, Step Functions, and Glue to ingest, validate, and transform financial data across multiple business units, with reliability, auditability, and fault tolerance built in.</div>
           </div>
           <div class="impact-item">
-            <div class="impact-label">Engineering Automation</div>
-            <div class="impact-desc">Constructed custom automated CI/CD tooling and VS Code workflows that update architecture documentation autonomously on every repository commit.</div>
+            <div class="impact-label">Technical Leadership</div>
+            <div class="impact-desc">Serve as technical lead, coordinating vendor development teams, conducting implementation reviews, mentoring engineers, and maintaining 80%+ unit and integration test coverage.</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-label">GenAI &amp; Engineering Automation</div>
+            <div class="impact-desc">Developed PoCs leveraging GenAI, NLP, and RAG to improve observability and compliance; built an AI agent that autonomously generates production-grade AWS architecture diagrams on every commit, plus custom VS Code AI agent workflows that automate repetitive engineering tasks across the team.</div>
           </div>
         </div>
 
         <div class="tag-row">
           <span class="tag">Java</span><span class="tag">AWS Lambda</span><span class="tag">Step Functions</span>
-          <span class="tag">AWS Glue</span><span class="tag">ISO 20022</span><span class="tag">Spring Boot</span><span class="tag">AWS CDK</span>
+          <span class="tag">AWS Glue</span><span class="tag">RAG / GenAI</span><span class="tag">Spring Boot</span><span class="tag">AWS CDK</span>
         </div>
       </div>
 
-      <!-- Role 2 -->
+      <!-- Role 2: Previous at same org -->
+      <div class="t-entry reveal">
+        <div class="t-header">
+          <div class="role">Software Engineer</div>
+          <div class="date">DEC 2021 — JUL 2025</div>
+        </div>
+        <div class="org">Principal Financial Group</div>
+
+        <div class="impact-group">
+          <div class="impact-item">
+            <div class="impact-label">Cloud Architecture &amp; Payments</div>
+            <div class="impact-desc">Designed end-to-end payment integration to Kyriba supporting Wire, ACH, and Check processing, with ISO 20022 compliant file structures, automated reconciliation, and duplicate-payment detection to strengthen financial data integrity.</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-label">Full Stack Modernization</div>
+            <div class="impact-desc">Led React-based UI modernization integrating Financial Institution (FI) APIs to retrieve and display check images, automating manual payment workflows and reducing manual intervention.</div>
+          </div>
+          <div class="impact-item">
+            <div class="impact-label">Security &amp; Observability</div>
+            <div class="impact-desc">Strengthened system security with OAuth 2.0 authentication (Apigee, Okta, Azure Entra ID) and centralized monitoring using CloudWatch, Grafana, ELK, and Dynatrace; managed infrastructure as code with AWS CDK and streamlined CI/CD via GitHub Actions.</div>
+          </div>
+        </div>
+
+        <div class="tag-row">
+          <span class="tag">Kyriba</span><span class="tag">ISO 20022</span><span class="tag">React</span>
+          <span class="tag">OAuth 2.0</span><span class="tag">CloudWatch</span><span class="tag">Grafana</span><span class="tag">AWS CDK</span>
+        </div>
+      </div>
+
+      <!-- Role 3 -->
       <div class="t-entry reveal">
         <div class="t-header">
           <div class="role">System Engineer</div>
@@ -542,17 +583,17 @@
         <div class="impact-group">
           <div class="impact-item">
             <div class="impact-label">Cloud Migration &amp; Infrastructure</div>
-            <div class="impact-desc">Migrated legacy on-premises applications to AWS (EC2, Lambda, Fargate) across GE Aviation, Digital, and Plant manufacturing verticals, improving system availability and scalability.</div>
+            <div class="impact-desc">Collaborated with GE clients (Aviation, Digital, and MMF Plant), migrating on-premises applications to Windows Server and AWS Cloud using EC2, Lambda, and Fargate for compute, Route 53 for DNS, and VPC for secure network architecture. Also leveraged Cloud Foundry, Predix, and GCP to modernize legacy applications.</div>
           </div>
           <div class="impact-item">
             <div class="impact-label">Full Stack Systems</div>
-            <div class="impact-desc">Engineered operational dashboards (WIP trackers, Material QR generators, BRC tracking systems) using React and Microservices backends to optimize shop-floor execution.</div>
+            <div class="impact-desc">Developed dashboard interfaces with React, PolymerJS, and VueJS, including WIP trackers, BOM trackers, Material QR generators, and INCCID, plus an application to manage invoices and track BRC.</div>
           </div>
         </div>
 
         <div class="tag-row">
           <span class="tag">AWS EC2</span><span class="tag">AWS Fargate</span><span class="tag">Cloud Foundry</span>
-          <span class="tag">Java</span><span class="tag">React</span><span class="tag">REST APIs</span>
+          <span class="tag">Java</span><span class="tag">React</span><span class="tag">VueJS</span><span class="tag">REST APIs</span>
         </div>
       </div>
     </div>
@@ -573,13 +614,18 @@
         </div>
         <div class="journey-step">
           <div class="journey-year">2022</div>
-          <div class="journey-title">Platform &amp; Treasury</div>
-          <div class="journey-sub">Event-Driven Serverless Architecture</div>
+          <div class="journey-title">Treasury &amp; Payments</div>
+          <div class="journey-sub">Kyriba, ISO 20022 &amp; Reconciliation</div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-year">2025</div>
+          <div class="journey-title">Enterprise Ledger</div>
+          <div class="journey-sub">Serverless Financial Foundations Platform</div>
         </div>
         <div class="journey-step">
           <div class="journey-year">PRESENT</div>
           <div class="journey-title">Distributed &amp; AI Tools</div>
-          <div class="journey-sub">Enterprise Ledger &amp; Agentic SDLC</div>
+          <div class="journey-sub">Agentic SDLC &amp; GenAI PoCs</div>
         </div>
       </div>
     </div>
@@ -597,7 +643,7 @@
     <div class="project-grid">
       <div class="project-card spot-card reveal">
         <div>
-          <div style="margin-bottom:12px;"><span class="tag">Active Project</span></div>
+          <div style="margin-bottom:12px;"><span class="tag">In Progress</span></div>
           <h3>Multi-Repo Architecture Intelligence Agent</h3>
           
           <div class="p-section">
@@ -606,7 +652,7 @@
           </div>
           <div class="p-section">
             <div class="p-section-title">Solution</div>
-            <div class="p-section-text">Built an intelligence agent that parses codebase ASTs, infrastructure configs, and API contracts to render unified dependency diagrams dynamically.</div>
+            <div class="p-section-text">Developing an AI-powered agent that ingests multiple GitHub repositories and generates a unified architecture diagram, mapping inter-repo dependencies, service connections, and system boundaries with contextual detail — enabling engineers to visualize the full system landscape without manual documentation effort.</div>
           </div>
         </div>
         <div class="tag-row" style="margin-top:20px;">
@@ -616,8 +662,8 @@
 
       <div class="project-card spot-card reveal">
         <div>
-          <div style="margin-bottom:12px;"><span class="tag">Research / Experiment</span></div>
-          <h3>Metadata-Driven NL → DB2 Query Engine</h3>
+          <div style="margin-bottom:12px;"><span class="tag">In Progress</span></div>
+          <h3>Self-Improving Natural Language to DB2 Query Engine</h3>
           
           <div class="p-section">
             <div class="p-section-title">Problem</div>
@@ -625,11 +671,11 @@
           </div>
           <div class="p-section">
             <div class="p-section-title">Solution</div>
-            <div class="p-section-text">Designed a deterministic query engine leveraging schema metadata, embeddings, and a feedback loop to resolve SQL queries without external API dependencies.</div>
+            <div class="p-section-text">Building a LLM-free conversational query engine for DB2 that uses metadata, embeddings, and vector search to identify relevant tables, parameters, and relationships from natural language input, eliminating dependency on external AI APIs. A user feedback loop continuously refines the underlying metadata after every query, improving resolution accuracy over time without retraining — integrating ML concepts from ongoing M.Tech research along the way.</div>
           </div>
         </div>
         <div class="tag-row" style="margin-top:20px;">
-          <span class="tag">Java</span><span class="tag">DB2</span><span class="tag">Vector Search</span><span class="tag">Embeddings</span>
+          <span class="tag">DB2</span><span class="tag">Vector Search</span><span class="tag">Embeddings</span><span class="tag">Feedback Loop</span>
         </div>
       </div>
     </div>
@@ -655,8 +701,8 @@
         <div class="skill-block">
           <h4>Backend &amp; Languages</h4>
           <div class="chip-row">
-            <span class="chip">Java (Core/EE)</span><span class="chip">Spring Boot</span><span class="chip">Python</span>
-            <span class="chip">RESTful APIs</span><span class="chip">SQL / T-SQL</span><span class="chip">TypeScript</span>
+            <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring MVC</span><span class="chip">Python</span>
+            <span class="chip">RESTful APIs</span><span class="chip">SQL / T-SQL</span><span class="chip">NoSQL</span><span class="chip">JavaScript / TypeScript</span>
           </div>
         </div>
 
@@ -665,23 +711,32 @@
           <div class="chip-row">
             <span class="chip">AWS Lambda</span><span class="chip">AWS S3</span><span class="chip">AWS SQS / SNS</span>
             <span class="chip">Step Functions</span><span class="chip">AWS Glue</span><span class="chip">DynamoDB</span>
-            <span class="chip">AWS CDK</span><span class="chip">Docker</span>
+            <span class="chip">AWS CDK</span><span class="chip">Cloud Foundry</span>
           </div>
         </div>
 
         <div class="skill-block">
           <h4>DevOps, Security &amp; Observability</h4>
           <div class="chip-row">
-            <span class="chip">GitHub Actions</span><span class="chip">OAuth 2.0 / Okta</span><span class="chip">CloudWatch</span>
-            <span class="chip">ELK Stack</span><span class="chip">Dynatrace</span><span class="chip">SonarQube</span>
+            <span class="chip">GitHub Actions</span><span class="chip">OAuth 2.0 (Apigee, Okta, Azure Entra ID)</span><span class="chip">CloudWatch</span>
+            <span class="chip">Grafana</span><span class="chip">ELK Stack</span><span class="chip">Dynatrace</span>
+            <span class="chip">SonarQube</span><span class="chip">CodeQL</span><span class="chip">Fortify</span>
+            <span class="chip">HashiCorp / BeyondTrust Vault</span>
           </div>
         </div>
 
         <div class="skill-block">
-          <h4>AI &amp; Productivity Tooling (Exploration)</h4>
+          <h4>AI &amp; Agentic Systems</h4>
           <div class="chip-row">
-            <span class="chip">MCP Servers</span><span class="chip">RAG Pipelines</span><span class="chip">Vector Databases</span>
-            <span class="chip">VS Code AI Workflows</span>
+            <span class="chip">Agentic AI for SDLC</span><span class="chip">MCP Servers</span><span class="chip">VS Code AI Agents</span>
+            <span class="chip">GitHub Copilot</span><span class="chip">GenAI (RAG, NLP)</span>
+          </div>
+        </div>
+
+        <div class="skill-block">
+          <h4>Tools &amp; Utilities</h4>
+          <div class="chip-row">
+            <span class="chip">Jira</span><span class="chip">Git / BitBucket</span><span class="chip">Cleo</span><span class="chip">GoAnywhere</span><span class="chip">SSMS</span>
           </div>
         </div>
       </div>
@@ -699,7 +754,7 @@
     <div class="ai-grid">
       <div class="ai-card spot-card reveal">
         <h3>Autonomous Architecture Documentation</h3>
-        <p>Engineered CI/CD pipeline triggers that analyze infrastructure changes on every commit, generating updated architecture diagrams to eliminate documentation drift.</p>
+        <p>Engineered an AI-powered agent that autonomously generates production-grade AWS architecture diagrams on every commit, ensuring documentation stays continuously up-to-date without manual intervention.</p>
       </div>
 
       <div class="ai-card spot-card reveal">
@@ -708,13 +763,39 @@
       </div>
 
       <div class="ai-card spot-card reveal">
-        <h3>Custom Engineering Workflows</h3>
-        <p>Streamlining boilerplate generation, repetitive pull request validation, and unit test scaffolding using tailored AI prompts and script hooks.</p>
+        <h3>Custom VS Code Agent Workflows</h3>
+        <p>Designed and maintained custom AI agent workflows integrated into VS Code to automate repetitive engineering tasks, improving coding productivity and consistency across the team.</p>
       </div>
 
       <div class="ai-card spot-card reveal">
-        <h3>Observability &amp; Log Analysis</h3>
-        <p>Exploring RAG-backed log parsing utilities to quickly cross-reference distributed system errors against past incident resolutions.</p>
+        <h3>GenAI, NLP &amp; RAG for Observability</h3>
+        <p>Built PoCs leveraging GenAI, NLP, and RAG to improve observability and compliance, including RAG-backed log parsing to cross-reference distributed system errors against past incident resolutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Education</div>
+      <h2>Academic background</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card spot-card reveal">
+        <div class="degree">Master of Technology, Artificial Intelligence &amp; Machine Learning</div>
+        <div class="school">Birla Institute of Technology and Science (BITS), Pilani</div>
+        <div class="meta">
+          <span>Apr 2026 — Mar 2028</span>
+        </div>
+      </div>
+      <div class="edu-card spot-card reveal">
+        <div class="degree">Bachelor of Engineering, Computer Engineering</div>
+        <div class="school">Padmabhooshan Vasantdada Patil Institute of Technology, Pune</div>
+        <div class="meta">
+          <span>Jun 2015 — Jun 2019</span>
+          <span>CGPA: 8.59 / 10.00</span>
+        </div>
       </div>
     </div>
   </div>
@@ -740,6 +821,7 @@
         <h3><span>⚡</span> Beyond the Code</h3>
         <ul class="bullet-list">
           <li><strong>Continuous Learning:</strong> Passionate about bridging classical CS with modern AI tools.</li>
+          <li><strong>Languages:</strong> Fluent in English, Hindi, Marathi, and Oriya.</li>
           <li><strong>Swimming:</strong> Rely on lap swimming for endurance and clear focus.</li>
           <li><strong>Coffee:</strong> Espresso enthusiast experimenting with roast profiles.</li>
           <li><strong>Location:</strong> Based in Pune, Maharashtra, India.</li>
@@ -765,7 +847,7 @@
     </div>
     <div class="footer-note">
       <span>Pune, Maharashtra, India</span>
-      <span>Built with AI</span>
+      <span>Shipped by a human, occasionally pair-programmed with AI.</span>
     </div>
   </div>
 </footer>
